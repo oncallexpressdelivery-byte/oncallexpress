@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>On Call Express Delivery | Fast & Reliable Delivery Across Perth</title>
+<meta name="description" content="On Call Express Delivery — Perth's fastest same-day and parcel delivery service. Available across all of Perth. Get a quote today!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap');
+</style>
+<style>
+  :root {
+    --black: #0a0a0a;
+    --yellow: #FFD000;
+    --yellow-dark: #E6BB00;
+    --white: #ffffff;
+    --gray: #f5f5f3;
+    --text-muted: #666;
+  }
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; background: #0a0a0a; }
+
+body {
+font-family: ‘Barlow’, Arial, sans-serif;
+background: #0a0a0a;
+color: var(–white);
+overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+position: fixed;
+top: 0; left: 0; right: 0;
+z-index: 100;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 1.2rem 5%;
+background: rgba(10,10,10,0.92);
+backdrop-filter: blur(10px);
+border-bottom: 1px solid rgba(255,208,0,0.15);
+}
+
+.nav-logo {
+font-family: ‘Barlow Condensed’, Impact, Arial Narrow, sans-serif;
+font-weight: 900;
+font-size: 1.4rem;
+letter-spacing: 0.02em;
+color: var(–white);
+text-decoration: none;
+}
+
+.nav-logo span { color: var(–yellow); }
+
+.nav-links {
+display: flex;
+gap: 2rem;
+list-style: none;
+}
+
+.nav-links a {
+color: rgba(255,255,255,0.75);
+text-decoration: none;
+font-size: 0.9rem;
+font-weight: 500;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(–yellow); }
+
+.nav-cta {
+background: var(–yellow);
+color: var(–black) !important;
+padding: 0.6rem 1.4rem;
+border-radius: 2px;
+font-weight: 700 !important;
+transition: background 0.2s !important;
+}
+
+.nav-cta:hover { background: var(–yellow-dark) !important; color: var(–black) !important; }
+
+/* HERO */
+.hero {
+min-height: 100vh;
+display: flex;
+align-items: center;
+padding: 8rem 5% 5rem;
+position: relative;
+overflow: hidden;
+background: #0a0a0a;
+}
+
+.hero::before {
+content: ‘’;
+position: absolute;
+top: -20%;
+right: -10%;
+width: 70vw;
+height: 100vh;
+background: radial-gradient(ellipse at center, rgba(255,208,0,0.08) 0%, transparent 70%);
+pointer-events: none;
+}
+
+.hero-badge {
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+background: rgba(255,208,0,0.1);
+border: 1px solid rgba(255,208,0,0.3);
+color: var(–yellow);
+font-size: 0.78rem;
+font-weight: 600;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+padding: 0.4rem 0.9rem;
+border-radius: 2px;
+margin-bottom: 1.5rem;
+animation: fadeUp 0.6s ease both;
+}
+
+.hero-badge::before {
+content: ‘’;
+width: 6px; height: 6px;
+background: var(–yellow);
+border-radius: 50%;
+animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+0%, 100% { opacity: 1; transform: scale(1); }
+50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+.hero-content { max-width: 750px; }
+
+.hero h1 {
+font-family: ‘Barlow Condensed’, Impact, Arial Narrow, sans-serif;
+font-weight: 900;
+font-size: clamp(3.5rem, 9vw, 7rem);
+line-height: 0.95;
+letter-spacing: -0.01em;
+text-transform: uppercase;
+margin-bottom: 1.5rem;
+animation: fadeUp 0.6s 0.1s ease both;
+}
+
+.hero h1 em {
+font-style: normal;
+color: var(–yellow);
+display: block;
+}
+
+.hero p {
+font-size: 1.1rem;
+font-weight: 300;
+color: rgba(255,255,255,0.7);
+line-height: 1.7;
+max-width: 520px;
+margin-bottom: 2.5rem;
+animation: fadeUp 0.6s 0.2s ease both;
+}
+
+.hero-actions {
+display: flex;
+gap: 1rem;
+flex-wrap: wrap;
+animation: fadeUp 0.6s 0.3s ease both;
+}
+
+.btn-primary {
+background: var(–yellow);
+color: var(–black);
+padding: 1rem 2.2rem;
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 800;
+font-size: 1.1rem;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+text-decoration: none;
+border-radius: 2px;
+transition: all 0.2s;
+border: none;
+cursor: pointer;
+}
+
+.btn-primary:hover {
+background: var(–yellow-dark);
+transform: translateY(-2px);
+box-shadow: 0 8px 25px rgba(255,208,0,0.3);
+}
+
+.btn-secondary {
+background: transparent;
+color: var(–white);
+padding: 1rem 2.2rem;
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 700;
+font-size: 1.1rem;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+text-decoration: none;
+border-radius: 2px;
+border: 1px solid rgba(255,255,255,0.3);
+transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+border-color: var(–yellow);
+color: var(–yellow);
+}
+
+.hero-stats {
+display: flex;
+gap: 3rem;
+margin-top: 4rem;
+padding-top: 3rem;
+border-top: 1px solid rgba(255,255,255,0.08);
+animation: fadeUp 0.6s 0.4s ease both;
+}
+
+.stat-num {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 900;
+font-size: 2.5rem;
+color: var(–yellow);
+line-height: 1;
+}
+
+.stat-label {
+font-size: 0.8rem;
+color: rgba(255,255,255,0.5);
+text-transform: uppercase;
+letter-spacing: 0.08em;
+margin-top: 0.2rem;
+}
+
+.hero-graphic {
+position: absolute;
+right: 5%;
+top: 50%;
+transform: translateY(-50%);
+width: 38vw;
+max-width: 500px;
+opacity: 0.06;
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 900;
+font-size: 22vw;
+line-height: 1;
+color: var(–yellow);
+pointer-events: none;
+user-select: none;
+}
+
+@keyframes fadeUp {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+/* TICKER */
+.ticker {
+background: var(–yellow);
+color: var(–black);
+padding: 0.75rem 0;
+overflow: hidden;
+white-space: nowrap;
+}
+
+.ticker-inner {
+display: inline-flex;
+animation: ticker 20s linear infinite;
+}
+
+.ticker-item {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 800;
+font-size: 1rem;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+padding: 0 2.5rem;
+}
+
+.ticker-item::before {
+content: ‘★’;
+margin-right: 2.5rem;
+}
+
+@keyframes ticker {
+from { transform: translateX(0); }
+to { transform: translateX(-50%); }
+}
+
+/* SERVICES */
+.services {
+padding: 6rem 5%;
+background: var(–black);
+}
+
+.section-label {
+font-size: 0.78rem;
+font-weight: 600;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+color: var(–yellow);
+margin-bottom: 1rem;
+}
+
+.section-title {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 900;
+font-size: clamp(2.5rem, 5vw, 4rem);
+text-transform: uppercase;
+line-height: 1;
+margin-bottom: 3.5rem;
+}
+
+.services-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 1.5px;
+background: rgba(255,255,255,0.06);
+border: 1px solid rgba(255,255,255,0.06);
+}
+
+.service-card {
+background: #0f0f0f;
+padding: 2.5rem;
+transition: background 0.3s;
+position: relative;
+overflow: hidden;
+}
+
+.service-card::after {
+content: ‘’;
+position: absolute;
+bottom: 0; left: 0;
+width: 0; height: 2px;
+background: var(–yellow);
+transition: width 0.3s;
+}
+
+.service-card:hover { background: #141414; }
+.service-card:hover::after { width: 100%; }
+
+.service-icon {
+font-size: 2.5rem;
+margin-bottom: 1.2rem;
+display: block;
+}
+
+.service-card h3 {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 800;
+font-size: 1.5rem;
+text-transform: uppercase;
+letter-spacing: 0.02em;
+margin-bottom: 0.8rem;
+}
+
+.service-card p {
+color: rgba(255,255,255,0.55);
+font-size: 0.95rem;
+line-height: 1.65;
+}
+
+/* WHY US */
+.why {
+padding: 6rem 5%;
+background: #0d0d0d;
+}
+
+.why-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 5rem;
+align-items: center;
+}
+
+.why-features {
+display: flex;
+flex-direction: column;
+gap: 2rem;
+margin-top: 2rem;
+}
+
+.feature {
+display: flex;
+gap: 1.2rem;
+align-items: flex-start;
+}
+
+.feature-num {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 900;
+font-size: 2.5rem;
+color: rgba(255,208,0,0.2);
+line-height: 1;
+min-width: 50px;
+}
+
+.feature h4 {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 700;
+font-size: 1.2rem;
+text-transform: uppercase;
+letter-spacing: 0.03em;
+margin-bottom: 0.3rem;
+}
+
+.feature p {
+color: rgba(255,255,255,0.5);
+font-size: 0.9rem;
+line-height: 1.6;
+}
+
+.why-visual {
+position: relative;
+}
+
+.why-big-text {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 900;
+font-size: clamp(6rem, 14vw, 12rem);
+text-transform: uppercase;
+line-height: 0.9;
+color: rgba(255,208,0,0.07);
+user-select: none;
+}
+
+.why-card {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: var(–yellow);
+color: var(–black);
+padding: 2.5rem;
+text-align: center;
+width: 220px;
+}
+
+.why-card-num {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 900;
+font-size: 4rem;
+line-height: 1;
+}
+
+.why-card-text {
+font-weight: 700;
+font-size: 0.85rem;
+text-transform: uppercase;
+letter-spacing: 0.08em;
+margin-top: 0.3rem;
+}
+
+/* COVERAGE */
+.coverage {
+padding: 5rem 5%;
+background: var(–yellow);
+color: var(–black);
+text-align: center;
+}
+
+.coverage .section-label { color: rgba(0,0,0,0.5); }
+
+.coverage .section-title { color: var(–black); margin-bottom: 1rem; }
+
+.coverage p {
+font-size: 1.1rem;
+opacity: 0.7;
+max-width: 500px;
+margin: 0 auto 2.5rem;
+}
+
+.coverage .btn-primary {
+background: var(–black);
+color: var(–yellow);
+}
+
+.coverage .btn-primary:hover {
+background: #1a1a1a;
+box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* CONTACT */
+.contact {
+padding: 6rem 5%;
+background: var(–black);
+}
+
+.contact-grid {
+display: grid;
+grid-template-columns: 1fr 1.2fr;
+gap: 5rem;
+align-items: start;
+}
+
+.contact-info h2 {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 900;
+font-size: clamp(2.5rem, 5vw, 3.5rem);
+text-transform: uppercase;
+line-height: 1;
+margin-bottom: 1.5rem;
+}
+
+.contact-info h2 span { color: var(–yellow); }
+
+.contact-info p {
+color: rgba(255,255,255,0.55);
+line-height: 1.7;
+margin-bottom: 2rem;
+}
+
+.contact-details {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+
+.contact-item {
+display: flex;
+align-items: center;
+gap: 1rem;
+color: rgba(255,255,255,0.7);
+font-size: 0.95rem;
+}
+
+.contact-item-icon {
+width: 40px; height: 40px;
+background: rgba(255,208,0,0.1);
+border: 1px solid rgba(255,208,0,0.2);
+border-radius: 2px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1rem;
+flex-shrink: 0;
+}
+
+.contact-form {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+
+.form-row {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1rem;
+}
+
+.form-group {
+display: flex;
+flex-direction: column;
+gap: 0.4rem;
+}
+
+.form-group label {
+font-size: 0.78rem;
+font-weight: 600;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: rgba(255,255,255,0.5);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+background: rgba(255,255,255,0.04);
+border: 1px solid rgba(255,255,255,0.1);
+color: var(–white);
+padding: 0.85rem 1rem;
+font-family: ‘Barlow’, sans-serif;
+font-size: 0.95rem;
+border-radius: 2px;
+outline: none;
+transition: border-color 0.2s;
+width: 100%;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+border-color: var(–yellow);
+}
+
+.form-group select option { background: #1a1a1a; }
+
+.form-group textarea { resize: vertical; min-height: 120px; }
+
+/* FOOTER */
+footer {
+background: #060606;
+border-top: 1px solid rgba(255,255,255,0.06);
+padding: 2.5rem 5%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 1rem;
+}
+
+.footer-logo {
+font-family: ‘Barlow Condensed’, sans-serif;
+font-weight: 900;
+font-size: 1.2rem;
+color: var(–white);
+}
+
+.footer-logo span { color: var(–yellow); }
+
+footer p {
+color: rgba(255,255,255,0.3);
+font-size: 0.85rem;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+.nav-links { display: none; }
+.hero-stats { gap: 1.5rem; }
+.hero-graphic { display: none; }
+.why-grid { grid-template-columns: 1fr; }
+.why-visual { display: none; }
+.contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+.form-row { grid-template-columns: 1fr; }
+}
+
+/* Success message */
+.success-msg {
+display: none;
+background: rgba(255,208,0,0.1);
+border: 1px solid rgba(255,208,0,0.3);
+color: var(–yellow);
+padding: 1rem;
+border-radius: 2px;
+text-align: center;
+font-weight: 600;
+}
+</style>
+
+</head>
+<body>
+
+<!-- NAV -->
+
+<nav>
+  <a href="#" class="nav-logo">ON CALL <span>EXPRESS</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="tel:0412636870">📞 0412 636 870</a></li>
+    <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="hero-graphic">24H</div>
+  <div class="hero-content">
+    <div class="hero-badge">Now Serving All of Perth</div>
+    <h1>Fast &amp;<br><em>Reliable</em><br>Delivery.</h1>
+    <p>Perth's go-to delivery service for same-day and parcel delivery. We get your packages where they need to go — fast, safe, and on time, every time.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Get a Free Quote</a>
+      <a href="#services" class="btn-secondary">Our Services</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">Available</div>
+      </div>
+      <div>
+        <div class="stat-num">ALL</div>
+        <div class="stat-label">Perth Areas</div>
+      </div>
+      <div>
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Reliable</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-item">Same Day Flower Delivery</span>
+    <span class="ticker-item">Same Day Delivery</span>
+    <span class="ticker-item">All Perth Areas</span>
+    <span class="ticker-item">Parcel Delivery</span>
+    <span class="ticker-item">Time-Sensitive Specialists</span>
+    <span class="ticker-item">Documents & Packages</span>
+    <span class="ticker-item">Fast & Reliable</span>
+    <span class="ticker-item">On Call Express</span>
+    <span class="ticker-item">Same Day Flower Delivery</span>
+    <span class="ticker-item">Same Day Delivery</span>
+    <span class="ticker-item">All Perth Areas</span>
+    <span class="ticker-item">Parcel Delivery</span>
+    <span class="ticker-item">Time-Sensitive Specialists</span>
+    <span class="ticker-item">Documents & Packages</span>
+    <span class="ticker-item">Fast & Reliable</span>
+    <span class="ticker-item">On Call Express</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+  <div class="section-label">What We Do</div>
+  <div class="section-title">Our Services</div>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon">⚡</span>
+      <h3>Same Day Delivery</h3>
+      <p>Need it there today? We pick up and deliver within hours anywhere across Perth. Urgent deliveries are our speciality — we move fast so you don't have to wait.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">📦</span>
+      <h3>Parcel Delivery</h3>
+      <p>We deliver parcels and medium-sized items using our Toyota RAV4 — with rear seats that fold flat to maximise cargo space. Perfect for boxes, bags, equipment, bulky goods, and everyday items. Not suitable for large furniture or oversized loads, but you'd be surprised how much we can fit! Mention your item in the quote form and we'll confirm.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🗺️</span>
+      <h3>Perth & Beyond</h3>
+      <p>North, South, East, West — we cover all of Perth metro and outer suburbs. But we don't stop there. We also deliver to remote areas across Western Australia. No destination is too far — if it's in WA, we'll get it there.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">💐</span>
+      <h3>Same Day Flower Delivery</h3>
+      <p>Surprise someone special with fresh flowers delivered the same day, anywhere across Perth. Whether it's a birthday, anniversary, or just because — we'll ensure your flowers arrive fresh, on time, and beautifully handled. Book before midday for guaranteed same-day delivery.</p>
+    </div>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">💳</span>
+      <h3>Flexible Payment</h3>
+      <p>We make paying easy. Accept <strong>Bank Transfer</strong>, <strong>PayID</strong>, <strong>Cash on Delivery</strong>, or pay securely online by card via Stripe. Afterpay available for larger jobs. Pay before or after delivery — we're flexible and work around what suits you best.</p>
+    </div>
+  </div>
+</section>
+
+<!-- URGENCY SECTION -->
+
+<section style="padding: 6rem 5%; background: #111; position: relative; overflow: hidden;">
+  <div style="position:absolute; top:0; left:0; right:0; bottom:0; background: radial-gradient(ellipse at 30% 50%, rgba(255,208,0,0.05) 0%, transparent 70%); pointer-events:none;"></div>
+  <div style="max-width: 900px; margin: 0 auto; position: relative;">
+    <div style="display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 2.5rem;">
+      <div style="width: 4px; height: 80px; background: var(--yellow); flex-shrink: 0; margin-top: 0.5rem;"></div>
+      <div>
+        <p style="font-size: 0.78rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1rem;">Our Promise</p>
+        <h2 style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2rem, 5vw, 3.5rem); text-transform: uppercase; line-height: 1.05; color: var(--white);">When Every Minute<br><span style="color: var(--yellow);">Counts,</span> We Deliver.</h2>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+      <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-left: 3px solid var(--yellow); padding: 2rem;">
+        <div style="font-size: 1.8rem; margin-bottom: 1rem;">📋</div>
+        <h4 style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 0.6rem; color: var(--white);">Business Critical</h4>
+        <p style="color: rgba(255,255,255,0.55); font-size: 0.95rem; line-height: 1.7;">Legal contracts, business tenders, corporate documents — we understand the stakes. Your time-sensitive business deliveries are handled with the highest level of professionalism and urgency.</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-left: 3px solid var(--yellow); padding: 2rem;">
+        <div style="font-size: 1.8rem; margin-bottom: 1rem;">🏥</div>
+        <h4 style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 0.6rem; color: var(--white);">Personal & Medical</h4>
+        <p style="color: rgba(255,255,255,0.55); font-size: 0.95rem; line-height: 1.7;">Medical paperwork, personal documents, urgent packages — for individuals who simply cannot wait. We treat every delivery as if it were our own, ensuring it arrives safely and on time.</p>
+      </div>
+    </div>
+    <div style="margin-top: 2rem; padding: 2rem; background: var(--yellow); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;">
+      <p style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.3rem; text-transform: uppercase; color: var(--black); max-width: 500px; line-height: 1.3;">Any delivery that simply cannot wait — we handle it with utmost priority, every single time.</p>
+      <a href="#contact" style="background: var(--black); color: var(--yellow); padding: 0.9rem 2rem; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; border-radius: 2px; white-space: nowrap;">Book Urgent Delivery →</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+
+<section class="why" id="why">
+  <div class="why-grid">
+    <div>
+      <div class="section-label">Why Choose Us</div>
+      <div class="section-title">Perth's Most Reliable Delivery Team</div>
+      <div class="why-features">
+        <div class="feature">
+          <div class="feature-num">01</div>
+          <div>
+            <h4>On-Time, Every Time</h4>
+            <p>We take punctuality seriously. Your delivery arrives when we say it will — no excuses, no delays.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-num">02</div>
+          <div>
+            <h4>Handled With Care</h4>
+            <p>Your items are treated as if they were our own. We handle every parcel carefully from pickup to drop-off.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-num">03</div>
+          <div>
+            <h4>Always Reachable</h4>
+            <p>Real people, real communication. We're available 24/7 and always pick up the phone.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-num">04</div>
+          <div>
+            <h4>Local Perth Knowledge</h4>
+            <p>We know every corner of Perth. That means faster routes, smarter deliveries, and better service.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="why-visual">
+      <div class="why-big-text">FAST<br>SAFE<br>NOW</div>
+      <div class="why-card">
+        <div class="why-card-num">★★★★★</div>
+        <div class="why-card-text">5-Star Service<br>Across Perth</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+
+<section class="coverage">
+  <div class="section-label">Service Area</div>
+  <div class="section-title">Perth, Outer Suburbs & Remote WA</div>
+  <p>From Joondalup to Mandurah, Fremantle to the Hills — and beyond. We also deliver to remote areas across Western Australia. Wherever you need it, we'll get it there.</p>
+  <a href="#contact" class="btn-primary">Get a Quote Now</a>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="section-label">Get In Touch</div>
+      <h2>Get a <span>Free</span> Quote Today</h2>
+      <p>Ready to book or want to know more? Reach out and we'll get back to you fast. No job too big or too small.</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <a href="tel:0412636870" style="color:inherit;text-decoration:none;">0412 636 870</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <a href="/cdn-cgi/l/email-protection#6e01000d0f02020b161e1c0b1d1d0a0b0207180b1c172e09030f0702400d0103" style="color:inherit;text-decoration:none;"><span class="__cf_email__" data-cfemail="711e1f12101d1d1409010314020215141d180714030831161c10181d5f121e1c">[email&#160;protected]</span></a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <span>Serving All Perth Metro Areas</span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">🕐</div>
+          <span>Available 24/7 — Including Weekends</span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">💳</div>
+          <span>Bank Transfer · PayID · Cash on Delivery · Card Online</span>
+        </div>
+        <div style="margin-top:1.5rem;">
+          <a href="https://buy.stripe.com/7sY7sK3OY56C8kp7oq48000" target="_blank" class="btn-primary" style="display:inline-block; width:100%; text-align:center;">💳 Pay Online Now</a>
+          <p style="font-size:0.78rem; color:rgba(255,255,255,0.3); text-align:center; margin-top:0.6rem;">Secure payments powered by Stripe. Accepts all major cards & Afterpay.</p>
+        </div>
+      </div>
+    </div>
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="John Smith" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="04XX XXX XXX" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="john@email.com">
+      </div>
+      <div class="form-group">
+        <label>Service Required</label>
+        <select>
+          <option value="">Select a service...</option>
+          <option>Same Day Delivery</option>
+          <option>Parcel Delivery</option>
+          <option>Other / Not Sure</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Delivery Details</label>
+        <textarea placeholder="Tell us about your delivery — pickup location, drop-off location, item size, and any special requirements..."></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%; font-size:1rem; padding:1.1rem;">Send Quote Request →</button>
+      <p style="font-size:0.82rem; color:rgba(255,255,255,0.35); text-align:center; line-height:1.5;">📌 Please note: We deliver items suitable for SUV transport. Mention your item in the form above and we'll confirm if we can help.</p>
+      <div class="success-msg" id="successMsg">✅ Thanks! We'll be in touch very soon.</div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="footer-logo">ON CALL <span>EXPRESS</span> DELIVERY</div>
+  <p>© 2025 On Call Express Delivery. All rights reserved. Perth, WA.</p>
+  <p>oncallexpressdelivery.store</p>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
+function handleSubmit(e) {
+e.preventDefault();
+document.getElementById(‘successMsg’).style.display = ‘block’;
+e.target.reset();
+setTimeout(() => {
+document.getElementById(‘successMsg’).style.display = ‘none’;
+}, 5000);
+}
+
+// Smooth scroll offset for fixed nav
+document.querySelectorAll(‘a[href^=”#”]’).forEach(a => {
+a.addEven
